@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>To do app</title>
+</head>
+<body>
+    <h1 id="title-app">To Do App</h1>
+    <section id="body-to-do-app">
+
+        <section id="normal-tasks-list">
+            <!--start - the section to add new tasks-->
+            <div id="task-button">
+                <input id="text-task" type="text" placeholder="write the task here!">
+                <span id="add-task" title="add task"></span>
+            </div>
+            <ul id="task-list"></ul>
+            <!--end-->
+        </section>
+
+        <!--start - the completed tasks section-->
+        <section id="finished-tasks-list">
+            <!--the counter that counts the completed tasks-->
+            <h2>Completed tasks (<span id="counter-task">0</span>) 
+
+                <!--the arrow that reveals the completed tasks when clicked-->
+                <div class="arrow-line">
+                    <div id="arrow-left"></div>
+                    <div id="arrow-right"></div>
+                </div>
+            </h2>
+
+            <ul id="completed-task-list" class="hide-tasks">
+            </ul>
+            <!--end-->
+        </section>
+    </section>
+    <script type="text/javascript" src="script/script.js"></script>
+</body>
+</html>

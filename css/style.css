@@ -1,0 +1,274 @@
+body {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   background-color: rgb(0, 105, 157)
+}
+
+#title-app {
+    color:  rgb(255, 255, 255);
+}
+
+#body-to-do-app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border-radius: 20px;
+}
+
+
+#normal-tasks-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgb(0, 187, 184);
+    width: 400px;
+    height: 100vw;
+    background-color: white;
+    border-radius: 20px;
+    margin-right: 5px;
+}
+
+#finished-tasks-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgb(0, 187, 184);
+    width: 400px;
+    height: 100vw;
+    background-color: rgba(0, 0, 0, 0);
+    background-color: white;
+    border-radius: 20px;
+    margin-left: 5px;
+   
+}
+
+#completed-task-list {
+    align-self: flex-start;
+}
+
+
+
+#task-list {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+}
+
+
+
+#task-button {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+
+
+
+@media only screen and (max-width: 830px) {
+    #body-to-do-app {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%
+    }
+
+    #normal-tasks-list {
+        height: auto;
+        margin-bottom: 10px;
+        width: 90%;
+    }
+    
+    #finished-tasks-list {
+        height: auto;
+        width: 90%;
+    }
+
+    #task-button {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-top: 10px;
+        width: 90%;
+    }
+
+
+}
+
+#text-task {
+    border-color:  rgb(0, 187, 184);
+    border-radius: 4px;
+    height: 40px;
+    width: 300px;
+    text-align: center;
+
+}
+
+
+
+#add-task {
+    margin-left: 20px;
+    position: relative;
+    display: inline-block; 
+    width: 40px; 
+    height: 40px; 
+    cursor: pointer; 
+    background-color: transparent; 
+    border-radius: 50%; 
+    transition: all 0.3s;
+}
+
+#add-task::before,
+#add-task::after {
+    content: '';
+    position: absolute;
+    background-color: rgb(0, 187, 184);
+   
+}
+
+#add-task::before {
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    height: 4px;
+    transform: translate(-50%, -50%);
+}
+
+#add-task::after {
+    top: 50%;
+    left: 50%;
+    width: 4px;
+    height: 70%;
+    transform: translate(-50%, -50%);
+}
+
+#add-task:hover {
+
+    background-color: rgb(0, 187, 184);
+    color: white;
+    border-radius: 50%;
+}
+
+#add-task:hover::before,
+#add-task:hover::after {
+    background-color: rgb(255, 255, 255);
+}
+
+/* Styling the remove button */
+#style-remove-button {
+    margin-left: 20px;
+    position: relative;
+    display: inline-block; 
+    width: 30px; 
+    height: 30px; 
+    cursor: pointer; 
+    background-color: transparent; 
+    border-radius: 50%; 
+    transition: all 0.3s;
+    border: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+#style-remove-button::before,
+#style-remove-button::after {
+    content: '';
+    position: absolute;
+    background-color: rgb(0, 187, 184);
+}
+
+#style-remove-button::before {
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    height: 2px;
+    transform: translate(-50%, -50%);
+}
+
+
+
+#style-remove-button:hover {
+    background-color: rgb(0, 187, 184);
+    color: white;
+    border-radius: 50%;
+}
+
+#style-remove-button:hover::before {
+    background-color: rgb(255, 255, 255);
+}
+
+
+.new-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: black;
+    list-style-type: none;   
+    padding-top: 10px;
+}
+
+
+
+.text-task-decoration::first-letter {
+    text-transform: uppercase;
+    font-family: 'Trebuchet MS';
+}
+  
+  .cut-text {
+    text-decoration: line-through;
+  
+  }
+  
+  #style-check {
+    width: 30px;
+    height: 30px;
+  }
+
+
+/* Arrow next to the completed tasks */
+
+  h2 {
+    display: flex;
+    align-items: center;
+  }
+  
+  .arrow-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    
+    width: 20px;
+    height: 20px;
+  }
+  
+  #arrow-left {
+    background-color: rgb(0, 187, 184);
+    width: 10px;
+    height: 2px;
+    rotate: 45deg;
+    margin-right: -2px;
+  }
+  
+  #arrow-right {
+    background-color: rgb(0, 187, 184);
+    width: 10px;
+    height: 2px;
+    rotate: -45deg;
+    margin-left: -2px;
+  }
+  
+  .hide-tasks {
+    display: none;
+  }
+  
+  .unhide-tasks {
+    display: block;
+  }
+  
+  
+  .arrow-line-up {
+    display: flex;
+    user-select: none;
+    transform: rotate(180deg);
+  }
